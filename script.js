@@ -81,9 +81,9 @@ const data = {
                     "Explore Aurora (code 2679 pour Quartiers du Capitaine)"
                 ]},
                 { title: "🔧 Crafts", items: [
-                    { text: "Salle scanner - Verre x3, Titane x3", icon: "https://static.wikia.nocookie.net/subnautica/images/1/1e/Scanner_Room.png/revision/latest?cb=20180626194329" },
-                    { text: "Canon propulsion - Titane x3, Pile x1, Piston x1", icon: "https://static.wikia.nocookie.net/subnautica/images/5/5d/Propulsion_Cannon.png/revision/latest?cb=20180626194329" },
-                    { text: "Canon répulsion - Titane x2, Pile x1, Aimant x3", icon: "https://static.wikia.nocookie.net/subnautica/images/7/7a/Repulsion_Cannon.png/revision/latest?cb=20180626194329" }
+                    "Salle scanner",
+                    "Canon propulsion",
+                    "Canon répulsion"
                 ]},
                 { title: "🗺️ Zones", items: [
                     "Forêt de champignons (Mushroom Forest) : Prof. 100-300m",
@@ -112,7 +112,7 @@ const data = {
                 { title: "🎯 Étapes", items: [
                     "Scan 9 fragments (Champignons, Zone crash, etc.)",
                     "Construis Cyclops (Baie véhicule mobile)",
-                    { text: "Construis Cyclops (Baie véhicule mobile)", icon: "https://static.wikia.nocookie.net/subnautica/images/9/9d/Cyclops.png/revision/latest?cb=20180626194329" }
+                    "Construis Cyclops"
                 ]},
                 { title: "🗺️ Zones", items: [
                     "Zone des bulbes (Bulb Zone) : Prof. 300-500m. Ressources : Nickel"
