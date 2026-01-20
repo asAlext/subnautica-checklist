@@ -1,33 +1,21 @@
-<div class="section">
-  <h2 class="section-title">🚤 Véhicules</h2>
-  <div class="section-content">
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Subnautica Checklist</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <label>
-      <input type="checkbox">
-      Construire le Seamoth
-    </label>
+<header>
+  <h1>Checklist Subnautica</h1>
+  <input type="text" id="search" placeholder="Rechercher..." />
+  <button id="reset">Reset checklist</button>
+  <p id="progress">Progression : 0%</p>
+</header>
 
-    <label>
-      <input type="checkbox">
-      Construire le Cyclops
-    </label>
+<main id="checklist"></main>
 
-  </div>
-</div>
-
-<div class="section">
-  <h2 class="section-title">🧪 Progression</h2>
-  <div class="section-content">
-
-    <label>
-      <input type="checkbox">
-      Explorer l’Aurora
-    </label>
-
-    <label>
-      <input type="checkbox">
-      Atteindre les profondeurs de lave
-    </label>
-
-  </div>
-</div>
+<script src="script.js"></script>
+</body>
+</html>
