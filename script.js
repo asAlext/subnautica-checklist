@@ -34,11 +34,9 @@ const data = {
                     "Répare radio (Fabricator + énergie solaire)",
                     "Lance signal de détresse, écoute réponses (capsules de survie 3,6,7,12,13,17,19)",
                     "Explore capsules pour plans (ex: capsule 3 = Seaglide, capsule 19 = Canon de propulsion)",
-                    "Récolte Champignons saignants pour Eau filtrée",
                     "Explore épaves pour fragments (Coupeur laser)"
                 ]},
                 { title: "Crafts", items: [
-                    { text: "Eau filtrée - Morceaux de Bleeder x1", icon: "https://static.wikia.nocookie.net/subnautica/images/1/1b/Filter_Water.png/revision/latest?cb=20180626194329" },
                     { text: "Seaglide - Lingot titane x2, Lubrifiant x1, Batterie x3", icon: "https://static.wikia.nocookie.net/subnautica/images/3/3e/Seaglide.png/revision/latest?cb=20180626194329" },
                     { text: "Coupeur laser - Diamant x1, Lingot titane x2, Verre x2", icon: "https://static.wikia.nocookie.net/subnautica/images/4/4d/Laser_Cutter.png/revision/latest?cb=20180626194329" },
                     { text: "Réservoir O2 haute capacité - Verre x2, Titane x4, Alimentation x1", icon: "https://static.wikia.nocookie.net/subnautica/images/2/2f/High_Capacity_Tank.png/revision/latest?cb=20180626194329" }
@@ -174,7 +172,7 @@ const data = {
         },
         {
             id: "materiaux-upgrades",
-            title: "Chapitre X : Liste Complète Matériaux pour Véhicules (Base + Tous Améliorations)",
+            title: "Liste Complète Matériaux pour Véhicules (Base + Tous Améliorations)",
             image: "https://static.wikia.nocookie.net/subnautica/images/3/3e/Seamoth.png/revision/latest?cb=20180626194329",
             sections: [
                 { title: "Seamoth (Base + Toutes les 12 améliorations)", items: [
