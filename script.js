@@ -234,13 +234,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const elem = document.getElementById('global-progress');
         if (elem) {
             elem.textContent = `Progression globale : ${percent}% (${checked}/${total} tâches)`;
-            console.log('Global progress updated:', percent, checked, total); // Debug
+            console.log('Compteur global mis à jour :', percent + '%', checked + '/' + total); // Debug pour vérifier
         } else {
-            console.warn('Élément #global-progress non trouvé dans le DOM');
+            console.warn('Élément #global-progress introuvable dans le DOM');
         }
     }
 
-    // Remplir sidebar
+    // Remplir la sidebar
     data.chapters.forEach(chapter => {
         const li = document.createElement('li');
         const prog = updateChapterProgress(chapter.id);
@@ -259,6 +259,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderChapter(chapter) {
         content.innerHTML = '';
 
+        // Bouton "Tout cocher ce chapitre"
         const checkAllBtn = document.createElement('button');
         checkAllBtn.textContent = "Tout cocher ce chapitre";
         checkAllBtn.style.margin = '0 0 20px 0';
@@ -268,6 +269,7 @@ document.addEventListener('DOMContentLoaded', () => {
         checkAllBtn.style.border = '1px solid #00acc1';
         checkAllBtn.style.borderRadius = '8px';
         checkAllBtn.style.cursor = 'pointer';
+        checkAllBtn.style.fontSize = '1em';
         checkAllBtn.onclick = () => {
             chapter.sections.forEach(sec => {
                 sec.items.forEach((_, index) => {
@@ -278,6 +280,12 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('subnautica-progress', JSON.stringify(progress));
             renderChapter(chapter);
             updateGlobalProgress();
+            // Mise à jour compteur du chapitre dans la sidebar
+            const link = document.querySelector(`a[href="#${chapter.id}"]`);
+            if (link) {
+                const prog = updateChapterProgress(chapter.id);
+                link.textContent = `${chapter.title} (${prog.checked}/${prog.total})`;
+            }
         };
         content.appendChild(checkAllBtn);
 
@@ -312,11 +320,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 checkbox.addEventListener('change', () => {
                     progress[key] = checkbox.checked;
                     localStorage.setItem('subnautica-progress', JSON.stringify(progress));
-                    console.log('Checkbox changed, key:', key, 'checked:', checkbox.checked); // Debug
+                    console.log('Case cochée/décochée → clé:', key, 'état:', checkbox.checked); // Debug
                     const prog = updateChapterProgress(chapter.id);
                     const link = document.querySelector(`a[href="#${chapter.id}"]`);
                     if (link) link.textContent = `${chapter.title} (${prog.checked}/${prog.total})`;
-                    updateGlobalProgress(); // Appel critique ici
+                    updateGlobalProgress(); // Appel ici = MAJ en temps réel du compteur global
                 });
 
                 const label = document.createElement('label');
@@ -338,7 +346,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const hash = window.location.hash.substring(1);
     let initialChapter = data.chapters.find(ch => ch.id === hash) || data.chapters[0];
     renderChapter(initialChapter);
-    updateGlobalProgress(); // Initial
+    updateGlobalProgress(); // Initialisation
 
     resetLink.addEventListener('click', (e) => {
         e.preventDefault();
