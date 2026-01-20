@@ -3,9 +3,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const progressText = document.getElementById("progress");
 
   function updateProgress() {
+    if (!progressText) return;
+
     const total = checkboxes.length;
-    const checked = document.querySelectorAll("input[type='checkbox']:checked").length;
-    const percent = Math.round((checked / total) * 100);
+    let checked = 0;
+
+    checkboxes.forEach(cb => {
+      if (cb.checked) checked++;
+    });
+
+    const percent = total === 0 ? 0 : Math.round((checked / total) * 100);
     progressText.textContent = `Progression : ${percent}% (${checked} / ${total})`;
   }
 
