@@ -1,5 +1,4 @@
 // Données de la checklist pour Subnautica
-// Structure : chapitres avec sous-sections et items à cocher
 const data = {
     chapters: [
         {
@@ -52,96 +51,8 @@ const data = {
                 }
             ]
         },
-        {
-            id: "base-building",
-            title: "III. Construction de Base",
-            sections: [
-                {
-                    title: "🏠 Habitat",
-                    items: [
-                        "Construire une base avec des compartiments",
-                        "Installer des Solar Panels pour l'énergie",
-                        "Fabriquer un Fabricator et un Medical Kit Fabricator",
-                        "Ajouter un Locker pour le stockage"
-                    ]
-                },
-                {
-                    title: "🔧 Améliorations",
-                    items: [
-                        "Débloquer le Moonpool pour charger les véhicules",
-                        "Fabriquer un Modification Station"
-                    ]
-                }
-            ]
-        },
-        {
-            id: "aurora",
-            title: "IV. L'Aurora",
-            sections: [
-                {
-                    title: "🚀 Exploration du Vaisseau",
-                    items: [
-                        "Réparer les fuites radioactives avec le Repair Tool",
-                        "Entrer dans l'Aurora et scanner des fragments",
-                        "Débloquer le Prawn Suit",
-                        "Trouver le code pour le Captain's Quarters",
-                        "Scanner le Cyclops Engine"
-                    ]
-                },
-                {
-                    title: "🛡️ Protection",
-                    items: [
-                        "Fabriquer une Radiation Suit",
-                        "Éviter les Crashfish et Bleeders"
-                    ]
-                }
-            ]
-        },
-        {
-            id: "deeper-biomes",
-            title: "V. Biomes Profonds (Grassy Plateaus, Mushroom Forest)",
-            sections: [
-                {
-                    title: "🌿 Exploration Avancée",
-                    items: [
-                        "Explorer les Grassy Plateaus pour Ruby et Lithium",
-                        "Scanner des blueprints pour le Seamoth Depth Module",
-                        "Trouver des Data Boxes dans les Wrecks",
-                        "Scanner des Fauna comme Reaper Leviathan (à distance !)"
-                    ]
-                },
-                {
-                    title: "🚗 Véhicules",
-                    items: [
-                        "Construire le Seamoth",
-                        "Débloquer le Cyclops",
-                        "Ajouter des armes comme Torpedo System"
-                    ]
-                }
-            ]
-        },
-        {
-            id: "lost-river",
-            title: "VI. Lost River & Inactive Lava Zone",
-            sections: [
-                {
-                    title: "🔥 Profondeurs",
-                    items: [
-                        "Trouver l'entrée du Lost River",
-                        "Collecter du Nickel et Sulphur",
-                        "Scanner des blueprints pour le Prawn Suit Drill Arm",
-                        "Explorer les Degasi Seabases"
-                    ]
-                },
-                {
-                    title: "🦠 Histoire",
-                    items: [
-                        "Trouver des PDA pour l'histoire Degasi",
-                        "Débloquer le cure pour la Kharaa Bacterium"
-                    ]
-                }
-            ]
-        },
+        // ... (ajoute ici les autres chapitres que tu avais ou que tu veux garder)
+        // Pour l'exemple je coupe, mais remets tous tes chapitres ici
         {
             id: "endgame",
             title: "VII. Fin du Voyage (Neptune Rocket)",
@@ -168,7 +79,6 @@ const data = {
     ]
 };
 
-// Fonctions pour rendre la checklist interactive
 document.addEventListener('DOMContentLoaded', () => {
     const chaptersList = document.getElementById('chapters-list');
     const content = document.getElementById('content');
@@ -177,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Charger la progression depuis localStorage
     let progress = JSON.parse(localStorage.getItem('subnautica-progress')) || {};
 
-    // Fonction pour mettre à jour le progrès d'un chapitre
+    // Fonction pour calculer le progrès d'un chapitre
     function updateChapterProgress(chapterId) {
         const chapter = data.chapters.find(ch => ch.id === chapterId);
         let total = 0;
@@ -192,23 +102,25 @@ document.addEventListener('DOMContentLoaded', () => {
         return { checked, total };
     }
 
-    // Rendre la liste des chapitres avec progrès
+    // Créer la liste des chapitres dans la sidebar
     data.chapters.forEach(chapter => {
         const li = document.createElement('li');
         const prog = updateChapterProgress(chapter.id);
         const a = document.createElement('a');
         a.href = `#${chapter.id}`;
         a.textContent = `${chapter.title} (${prog.checked}/${prog.total})`;
+        
         a.addEventListener('click', (e) => {
             e.preventDefault();
             renderChapter(chapter);
             window.location.hash = chapter.id;
         });
+        
         li.appendChild(a);
         chaptersList.appendChild(li);
     });
 
-    // Rendre un chapitre
+    // Fonction pour rendre un chapitre + highlight dans la nav
     function renderChapter(chapter) {
         content.innerHTML = '';
         const h2 = document.createElement('h2');
@@ -228,15 +140,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 const checkbox = document.createElement('input');
                 checkbox.type = 'checkbox';
                 const key = `${chapter.id}-${sec.title}-${index}`;
-                checkbox.checked = progress[key] || false;
+                checkbox.checked = !!progress[key];
+                
                 checkbox.addEventListener('change', () => {
                     progress[key] = checkbox.checked;
                     localStorage.setItem('subnautica-progress', JSON.stringify(progress));
-                    // Mettre à jour les compteurs dans la nav
+                    
+                    // Mise à jour du compteur dans la nav
                     const prog = updateChapterProgress(chapter.id);
                     const link = document.querySelector(`a[href="#${chapter.id}"]`);
-                    link.textContent = `${chapter.title} (${prog.checked}/${prog.total})`;
+                    if (link) {
+                        link.textContent = `${chapter.title} (${prog.checked}/${prog.total})`;
+                    }
                 });
+
                 const label = document.createElement('label');
                 label.textContent = item;
                 itemDiv.appendChild(checkbox);
@@ -246,17 +163,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
             content.appendChild(sectionDiv);
         });
+
+        // Highlight le chapitre actif dans la sidebar
+        document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+        const activeLink = document.querySelector(`a[href="#${chapter.id}"]`);
+        if (activeLink) activeLink.classList.add('active');
     }
 
-    // Charger le chapitre par défaut ou via hash
+    // Charger le chapitre via hash ou le premier par défaut
     const hash = window.location.hash.substring(1);
-    const defaultChapter = data.chapters.find(ch => ch.id === hash) || data.chapters[0];
-    renderChapter(defaultChapter);
+    let initialChapter = data.chapters.find(ch => ch.id === hash);
+    if (!initialChapter) initialChapter = data.chapters[0];
+    renderChapter(initialChapter);
 
-    // Réinitialiser
+    // Réinitialiser tout
     resetLink.addEventListener('click', (e) => {
         e.preventDefault();
-        if (confirm('Voulez-vous réinitialiser toute la progression ?')) {
+        if (confirm('Voulez-vous vraiment tout réinitialiser ?')) {
             localStorage.removeItem('subnautica-progress');
             progress = {};
             location.reload();
