@@ -38,10 +38,10 @@ const data = {
                     "Explore épaves pour fragments (Coupeur laser)"
                 ]},
                 { title: "🔧 Crafts", items: [
-                    { text: "Eau filtrée - Morceaux de Bleeder x1", icon: "https://static.wikia.nocookie.net/subnautica/images/1/1b/Filter_Water.png/revision/latest?cb=20180626194329" },
-                    { text: "Seaglide - Lingot titane x2, Lubrifiant x1, Batterie x3", icon: "https://static.wikia.nocookie.net/subnautica/images/3/3e/Seaglide.png/revision/latest?cb=20180626194329" },
-                    { text: "Coupeur laser - Diamant x1, Lingot titane x2, Verre x2", icon: "https://static.wikia.nocookie.net/subnautica/images/4/4d/Laser_Cutter.png/revision/latest?cb=20180626194329" },
-                    { text: "Réservoir O2 haute capacité - Verre x2, Titane x4, Alimentation x1", icon: "https://static.wikia.nocookie.net/subnautica/images/2/2f/High_Capacity_Tank.png/revision/latest?cb=20180626194329" }
+                    "Eau filtrée",
+                    "Seaglide",
+                    "Coupeur laser",
+                    "Réservoir O2 haute capacité"
                 ]},
                 { title: "🗺️ Zones", items: [
                     "Forêt de varech (Kelp Forest) : Prof. 20-60m. Dangers : Stalkers près épaves"
@@ -60,9 +60,9 @@ const data = {
                     "Explore pour plans (Canon de propulsion / Canon de répulsion)"
                 ]},
                 { title: "🔧 Crafts clés", items: [
-                    { text: "Constructeur d'habitats - Verre x2, Titane x2", icon: "https://static.wikia.nocookie.net/subnautica/images/7/7b/Habitat_Builder.png/revision/latest?cb=20180626194329" },
-                    { text: "Baie véhicule mobile (MV Bay) - Lingot titane x2, Pile énergie x1, Graisse x1, Puce x1", icon: "https://static.wikia.nocookie.net/subnautica/images/8/8e/Mobile_Vehicle_Bay.png/revision/latest?cb=20180626194329" },
-                    { text: "Fabrique Seamoth", icon: "https://static.wikia.nocookie.net/subnautica/images/3/3e/Seamoth.png" }
+                    "Constructeur d'habitats",
+                    "Baie véhicule mobile",
+                    { text: "Fabrique Seamoth, icon: "https://static.wikia.nocookie.net/subnautica/images/3/3e/Seamoth.png" }
                 ]},
                 { title: "🗺️ Zones", items: [
                     "Plateaux herbeux (Grassy Plateaus) : Prof. 50-200m. Dangers : Requins de sable",
