@@ -1,4 +1,4 @@
-// Données de la checklist pour Subnautica - Version COMPLÈTE
+// Données de la checklist pour Subnautica - Version COMPLÈTE avec 10 chapitres (sans icônes pour éviter les problèmes)
 const data = {
     chapters: [
         {
@@ -6,77 +6,88 @@ const data = {
             title: "Chapitre 1 : Le Crash et la Survie Initiale",
             sections: [
                 { title: "🎯 Objectif & Étapes détaillées", items: [
-                    "Réparer la radio endommagée",
-                    "Scanner la faune/flore de base",
-                    "Collecter des ressources : Quartz (silice), Champi abyssal (champignons), Titane/Cuivre des affleurements calcaires",
-                    "Explore autour : récolte Minerai de titane, Minerai de cuivre, Quartz, Minerai d'argent, Affleurements calcaires (pour Caoutchouc de silicone, Champignons acides)"
+                    "Éteins l'incendie (Extincteur du conteneur)",
+                    "Scanner tout (PDA auto-guide)",
+                    "Répare les systèmes (Repair Tool : scan Titanium près capsule)",
+                    "Hydrate-toi (Bouteilles d'eau du conteneur), mange Blocs de nutriments si urgence",
+                    "Explore autour : récolte Minerai de titane, Minerai de cuivre, Quartz, Minerai d'argent, Affleurements calcaires (pour Caoutchouc de silicone, Champignons acides)",
+                    "Répare Fabricator de kits médicaux (gratuit, +50 PV)"
                 ]},
-                { title: "🔧 Crafts essentiels", items: [
-                    "Outil de réparation",
-                    "Couteau de survie",
-                    "Palmes",
-                    "Lampe torche",
-                    "Scanner",
-                    "Réservoir O2 standard"
+                { title: "🔧 Crafts essentiels (Fabricator de la capsule)", items: [
+                    "Outil de réparation - Silice x1, Caviar de Crushfish x2",
+                    "Couteau de survie - Silice x2",
+                    "Palmes - Silice x2",
+                    "Lampe torche - Silice x1, Lingot de titane x1, Batterie x1",
+                    "Scanner - Lingot de titane x2",
+                    "Réservoir O2 standard - Silice x2, Titane x2"
                 ]},
                 { title: "🗺️ Zones à explorer", items: [
-                    "Bancs calmes (Safe Shallows)"
+                    "Bancs calmes (Safe Shallows) : Prof. 0-30m. Ressources abondantes, dangers : aucun"
                 ]}
             ]
         },
         {
             id: "chapitre-2",
-            title: "Chapitre 2 : Outils Essentiels et Première Exploration",
+            title: "Chapitre 2 : Premiers Outils Avancés et Signaux de Détresse",
             sections: [
                 { title: "🎯 Étapes détaillées", items: [
-                    "Explorer des grottes pour récupérer du soufre de cave",
-                    "Répondre au signal de la Capsules de survie 3 (radio)"
+                    "Répare radio (Fabricator + énergie solaire)",
+                    "Lance signal de détresse, écoute réponses (capsules de survie 3,6,7,12,13,17,19)",
+                    "Explore capsules pour plans (ex: capsule 3 = Seaglide, capsule 19 = Canon de propulsion)",
+                    "Récolte Champignons saignants pour Eau filtrée",
+                    "Explore épaves pour fragments (Coupeur laser)"
+                ]},
+                { title: "🔧 Crafts", items: [
+                    "Eau filtrée - Morceaux de Bleeder x1",
+                    "Seaglide - Lingot titane x2, Lubrifiant x1, Batterie x3",
+                    "Coupeur laser - Diamant x1, Lingot titane x2, Verre x2",
+                    "Réservoir O2 haute capacité - Verre x2, Titane x4, Alimentation x1"
                 ]},
                 { title: "🗺️ Zones", items: [
-                    "Capsules de survie 3",
-                    "Grottes des Bancs calmes (Safe Shallows)"
+                    "Forêt de varech (Kelp Forest) : Prof. 20-60m. Dangers : Stalkers près épaves"
                 ]}
             ]
         },
         {
             id: "chapitre-3",
-            title: "Chapitre 3 : Mobilité et Améliorations O₂",
+            title: "Chapitre 3 : Construction du Seamoth et Exploration Moyenne Profondeur",
             sections: [
                 { title: "🎯 Étapes", items: [
-                    "Collecter de l'Argent",
-                    "Scanner fragments dispersés/épaves",
-                    "Répondre à la Capsules de survie 17 pour le fragments de Seamoth",
-                    "Fabrique le Constructeur d'habitat",
-                    "Explore pour plans (Canon de propulsion / Canon de répulsion)",
-                    "Fabriquer la Combinaison Radiologique complète"
+                    "Scan fragments Seamoth (épaves Plateaux herbeux)",
+                    "Construis Habitat Builder (de gros débris)",
+                    "Construis base simple (Salle polyvalente), Moonpool, Baie véhicule mobile (MV Bay)",
+                    "Fabrique Seamoth",
+                    "Explore pour plans (Canon de propulsion / Canon de répulsion)"
                 ]},
                 { title: "🔧 Crafts clés", items: [
-                    "Boussole (databox Capsules de survie 3)",
-                    "Réservoir O₂ grande capacité",
-                    "Canon à propulsion"
+                    "Constructeur d'habitats - Verre x2, Titane x2",
+                    "Baie véhicule mobile (MV Bay) - Lingot titane x2, Pile énergie x1, Graisse x1, Puce x1",
+                    "Seamoth - Lingot plasteel x2, Pile énergie x1, Puce x1"
                 ]},
                 { title: "🗺️ Zones", items: [
-                    "Forêt de Varech (premières épaves)"
-                    "Plateaux herbeux (Grassy Plateaus)"
+                    "Plateaux herbeux (Grassy Plateaus) : Prof. 50-200m. Dangers : Requins de sable",
+                    "Zone de crash (Crash Zone) : Dangers : Reapers ! Lithium sur Île flottante"
                 ]}
             ]
         },
         {
             id: "chapitre-4",
-            title: "Chapitre 4 : Première Base et Seamoth",
+            title: "Chapitre 4 : Bases Avancées et Armes",
             sections: [
                 { title: "🎯 Étapes", items: [
-                    "Choisir un spot pour une base (près de titane/cuivre)",
-                    "Scanner des fragments de Baie à véhicules mobile",
-                    "Scanner des fragments de Seamoth dans des épaves"
+                    "Base en Plateaux/Champignons : Salle polyvalente x2+, Fabricator, Batteries",
+                    "Salle scanner + modules (HUD ressources)",
+                    "Canon de propulsion pour pousser objets/leurres",
+                    "Explore Aurora (code 2679 pour Quartiers du Capitaine)"
                 ]},
                 { title: "🔧 Crafts", items: [
-                    "Salle scanner",
-                    "Baie Véhicules Mobile",
-                    "Seamoth"
+                    "Salle scanner - Verre x3, Titane x3",
+                    "Canon propulsion - Titane x3, Pile x1, Piston x1",
+                    "Canon répulsion - Titane x2, Pile x1, Aimant x3"
                 ]},
                 { title: "🗺️ Zones", items: [
-                    "Épaves Plateaux Herbeux pour Seamoth"
+                    "Forêt de champignons (Mushroom Forest) : Prof. 100-300m",
+                    "Aurora : Radioactif (armure anti-radiation). Plans PRAWN/Cyclops"
                 ]}
             ]
         },
@@ -85,42 +96,72 @@ const data = {
             title: "Chapitre 5 : Construction Combinaison PRAWN",
             sections: [
                 { title: "🎯 Étapes", items: [
-                    "Explorer zone radiation",
-                    "Répondre Capsules de survie 19",
-                    "Scanner des fragments de la Station de Modification"
+                    "Plan Aurora Abordage 2/2",
+                    "Rubis (Évents thermiques), Sac de gel (Grottes Jellyshroom)",
+                    "Fragments bras (Grand Récif Profond)"
                 ]},
-                { title: "🔧 Crafts", items: [
-                    "Chambre d'immersion",
-                    "Console d'amélioration de véhicules",
-                    "Station de Modification",
-                    "Module Profondeur MK1"
-                ]},
-                
                 { title: "🗺️ Zones", items: [
-                    "Récifs clairsemés",
-                    "Capsules de survie 19"
+                    "Grand Récif (Grand Reef) : Prof. 200-500m. Dangers : Crabsquid, Sea Treader"
                 ]}
             ]
         },
         {
             id: "chapitre-6",
-            title: "Chapitre 6 : Degasi, Sunbeam et Premiers Aliens",
+            title: "Chapitre 6 : Construction Cyclops et Exploration Zone des Bulbes",
             sections: [
                 { title: "🎯 Étapes", items: [
-                    "Suivre balises Degasi : Île Flottante, Grotte Méduse, Abysse des Grands récifs",
-                    "Aller au site Sunbeam",
-                    "Entrer dans la structure avec la tablette violette*",
-                    "Scanner l'Œuf du Câlineur"
+                    "Scan 9 fragments (Champignons, Zone crash, etc.)",
+                    "Construis Cyclops (Baie véhicule mobile)",
+                    "Améliorations Cyclops (profondeur jusqu'à 1700m)"
                 ]},
-                { title: "🔧 Crafts", items: [
-                    "Salle Polyvalente, Centrale Thermique, Réacteur Nucléaire",
-                    "Fabriquer un Aquariums"
-                ]},
-                
                 { title: "🗺️ Zones", items: [
-                    "Bases Degasi abandonnées",
-                    "Structure étrange (tablette violette)*",
-                    "Île montagneuse"
+                    "Zone des bulbes (Bulb Zone) : Prof. 300-500m. Ressources : Nickel"
+                ]}
+            ]
+        },
+        {
+            id: "chapitre-7",
+            title: "Chapitre 7 : Profondeurs Fatales - Rivière Perdue et Lave",
+            sections: [
+                { title: "🎯 Étapes", items: [
+                    "PRAWN profondeur MK2/3 (Kyanite)",
+                    "Explore Rivière perdue (Léviathans fantômes)",
+                    "Active Arches aliens (tablettes orange/violette)"
+                ]},
+                { title: "🗺️ Zones", items: [
+                    "Rivière perdue (Lost River) : Prof. 500-1100m. Dangers : Léviathans fantômes",
+                    "Lacs de lave (Lava Lakes) : Prof. 1300-1700m. Dangers : Dragons de mer !"
+                ]}
+            ]
+        },
+        {
+            id: "chapitre-8",
+            title: "Chapitre 8 : Bases Aliens et Guérison",
+            sections: [
+                { title: "🎯 Étapes", items: [
+                    "Installation de recherche sur les maladies (tablette bleue)",
+                    "Installation de confinement principal (incubation œufs Empereur de mer)",
+                    "Guérison Kharaa"
+                ]},
+                { title: "🗺️ Zones", items: [
+                    "Installation de confinement principal : Prof. 1400m"
+                ]}
+            ]
+        },
+        {
+            id: "chapitre-9",
+            title: "Chapitre 9 : Désactivation Canon et Évasion",
+            sections: [
+                { title: "🎯 Étapes", items: [
+                    "Désactive Plateforme de quarantaine (Cellule ionique)",
+                    "Plan Fusée (Quartiers Capitaine Aurora)",
+                    "Construis sur surface"
+                ]},
+                { title: "🗺️ Zones", items: [
+                    "Surface (Île flottante sûre)"
+                ]},
+                { title: "🏆 Fin du jeu", items: [
+                    "Lance fusée après guérison. Félicitations ! Explore 100% pour bases Degasi, Précurseurs"
                 ]}
             ]
         },
@@ -196,7 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Remplir sidebar
+    // Remplir la sidebar
     data.chapters.forEach(chapter => {
         const li = document.createElement('li');
         const prog = updateChapterProgress(chapter.id);
@@ -215,7 +256,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderChapter(chapter) {
         content.innerHTML = '';
 
-        // Bouton "Tout cocher"
         const checkAllBtn = document.createElement('button');
         checkAllBtn.textContent = "Tout cocher ce chapitre";
         checkAllBtn.style.margin = '0 0 20px 0';
@@ -258,14 +298,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const itemDiv = document.createElement('div');
                 itemDiv.classList.add('item');
 
-                if (typeof itemObj === 'object' && itemObj.icon) {
-                    const icon = document.createElement('img');
-                    icon.src = itemObj.icon;
-                    icon.classList.add('item-icon');
-                    icon.alt = '';
-                    itemDiv.appendChild(icon);
-                }
-
+                // Pas d'icône ici pour éviter les problèmes
                 const checkbox = document.createElement('input');
                 checkbox.type = 'checkbox';
                 const key = `${chapter.id}-${sec.title}-${index}`;
@@ -277,7 +310,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const prog = updateChapterProgress(chapter.id);
                     const link = document.querySelector(`a[href="#${chapter.id}"]`);
                     if (link) link.textContent = `${chapter.title} (${prog.checked}/${prog.total})`;
-                    updateGlobalProgress(); // MAJ immédiate du compteur dans la sidebar
+                    updateGlobalProgress();
                 });
 
                 const label = document.createElement('label');
@@ -299,7 +332,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const hash = window.location.hash.substring(1);
     let initialChapter = data.chapters.find(ch => ch.id === hash) || data.chapters[0];
     renderChapter(initialChapter);
-    updateGlobalProgress(); // Initial
+    updateGlobalProgress();
 
     resetLink.addEventListener('click', (e) => {
         e.preventDefault();
