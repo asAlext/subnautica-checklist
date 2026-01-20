@@ -9,8 +9,7 @@ const data = {
                     "Réparer la radio endommagée",
                     "Scanner la faune/flore de base",
                     "Collecter des ressources : Quartz (silice), Champi abyssal (champignons), Titane/Cuivre des affleurements calcaires",
-                    "Explore autour : récolte Minerai de titane, Minerai de cuivre, Quartz, Minerai d'argent, Affleurements calcaires (pour Caoutchouc de silicone, Champignons acides)",
-                    "Répare Fabricator de kits médicaux (gratuit, +50 PV)"
+                    "Explore autour : récolte Minerai de titane, Minerai de cuivre, Quartz, Minerai d'argent, Affleurements calcaires (pour Caoutchouc de silicone, Champignons acides)"
                 ]},
                 { title: "🔧 Crafts essentiels", items: [
                     "Outil de réparation",
@@ -41,44 +40,43 @@ const data = {
         },
         {
             id: "chapitre-3",
-            title: "Chapitre 3 : Construction du Seamoth et Exploration Moyenne Profondeur",
+            title: "Chapitre 3 : Mobilité et Améliorations O₂",
             sections: [
                 { title: "🎯 Étapes", items: [
-                    "Scan fragments Seamoth (épaves Plateaux herbeux)",
-                    "Construis Habitat Builder (de gros débris)",
-                    "Construis base simple (Salle polyvalente), Moonpool, Baie véhicule mobile (MV Bay)",
-                    "Fabrique Seamoth",
-                    "Explore pour plans (Canon de propulsion / Canon de répulsion)"
+                    "Collecter de l'Argent",
+                    "Scanner fragments dispersés/épaves",
+                    "Répondre à la Capsules de survie 17 pour le fragments de Seamoth",
+                    "Fabrique le Constructeur d'habitat",
+                    "Explore pour plans (Canon de propulsion / Canon de répulsion)",
+                    "Fabriquer la Combinaison Radiologique complète"
                 ]},
                 { title: "🔧 Crafts clés", items: [
-                    "Constructeur d'habitats",
-                    "Baie véhicule mobile",
-                    "Fabrique Seamoth"
+                    "Boussole (databox Capsules de survie 3)",
+                    "Réservoir O₂ grande capacité",
+                    "Canon à propulsion"
                 ]},
                 { title: "🗺️ Zones", items: [
-                    "Plateaux herbeux (Grassy Plateaus) : Prof. 50-200m. Dangers : Requins de sable",
-                    "Zone de crash (Crash Zone) : Dangers : Reapers ! Lithium sur Île flottante"
+                    "Forêt de Varech (premières épaves)"
+                    "Plateaux herbeux (Grassy Plateaus)"
                 ]}
             ]
         },
         {
             id: "chapitre-4",
-            title: "Chapitre 4 : Bases Avancées et Armes",
+            title: "Chapitre 4 : Première Base et Seamoth",
             sections: [
                 { title: "🎯 Étapes", items: [
-                    "Base en Plateaux/Champignons : Salle polyvalente x2+, Fabricator, Batteries",
-                    "Salle scanner + modules (HUD ressources)",
-                    "Canon de propulsion pour pousser objets/leurres",
-                    "Explore Aurora (code 2679 pour Quartiers du Capitaine)"
+                    "Choisir un spot pour une base (près de titane/cuivre)",
+                    "Scanner des fragments de Baie à véhicules mobile",
+                    "Scanner des fragments de Seamoth dans des épaves"
                 ]},
                 { title: "🔧 Crafts", items: [
                     "Salle scanner",
-                    "Canon propulsion",
-                    "Canon répulsion"
+                    "Baie Véhicules Mobile",
+                    "Seamoth"
                 ]},
                 { title: "🗺️ Zones", items: [
-                    "Forêt de champignons (Mushroom Forest) : Prof. 100-300m",
-                    "Aurora : Radioactif (armure anti-radiation). Plans PRAWN/Cyclops"
+                    "Épaves Plateaux Herbeux pour Seamoth"
                 ]}
             ]
         },
