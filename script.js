@@ -125,35 +125,6 @@ const data = {
             ]
         },
         {
-            id: "chapitre-7",
-            title: "Chapitre 7 : Aurora, Prawn et Cyclops",
-            sections: [
-                { title: "🎯 Étapes", items: [
-                    "",
-                    "",
-                    ""
-                ]},
-                { title: "🗺️ Zones", items: [
-                    "",
-                    ""
-                ]}
-            ]
-        },
-        {
-            id: "chapitre-8",
-            title: "Chapitre 8 : Bases Aliens et Guérison",
-            sections: [
-                { title: "🎯 Étapes", items: [
-                    "",
-                    "",
-                    ""
-                ]},
-                { title: "🗺️ Zones", items: [
-                    ""
-                ]}
-            ]
-        },
-        {
             id: "materiaux-upgrades",
             title: "Liste Complète Matériaux pour Véhicules (Base + Tous Améliorations)",
             sections: [
