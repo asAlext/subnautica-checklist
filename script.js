@@ -10,9 +10,7 @@ const data = {
                     "Éteins l'incendie (Extincteur du conteneur)",
                     "Scanner tout (PDA auto-guide)",
                     "Répare les systèmes (Repair Tool : scan Titanium près capsule)",
-                    "Hydrate-toi (Bouteilles d'eau du conteneur), mange Blocs de nutriments si urgence",
                     "Explore autour : récolte Minerai de titane, Minerai de cuivre, Quartz, Minerai d'argent, Affleurements calcaires (pour Caoutchouc de silicone, Champignons acides)",
-                    "Répare Fabricator de kits médicaux (gratuit, +50 PV)"
                 ]},
                 { title: "Crafts essentiels (Fabricator de la capsule)", items: [
                     { text: "Outil de réparation - Silice x1, Caviar de Crushfish x2", icon: "https://static.wikia.nocookie.net/subnautica/images/5/5e/Repair_Tool.png/revision/latest?cb=20180626194329" },
