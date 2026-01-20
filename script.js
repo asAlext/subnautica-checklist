@@ -62,7 +62,7 @@ const data = {
                 { title: "🔧 Crafts clés", items: [
                     "Constructeur d'habitats",
                     "Baie véhicule mobile",
-                    { text: "Fabrique Seamoth, icon: "https://static.wikia.nocookie.net/subnautica/images/3/3e/Seamoth.png" }
+                    "Fabrique Seamoth"
                 ]},
                 { title: "🗺️ Zones", items: [
                     "Plateaux herbeux (Grassy Plateaus) : Prof. 50-200m. Dangers : Requins de sable",
